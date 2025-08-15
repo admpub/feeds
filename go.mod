@@ -1,4 +1,4 @@
-module github.com/phirework/feeds
+module github.com/admpub/feeds
 
 go 1.20
 
