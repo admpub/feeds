@@ -142,6 +142,8 @@ func (r *Rss) RssFeed() *RssFeed {
 			if len(r.Author.Name) > 0 {
 				author = fmt.Sprintf("%s (%s)", r.Author.Email, r.Author.Name)
 			}
+		} else if len(r.Author.Name) > 0 {
+			author = r.Author.Name
 		}
 	}
 
