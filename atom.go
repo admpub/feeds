@@ -152,7 +152,7 @@ func (a *Atom) AtomFeed() *AtomFeed {
 	}
 
 	var id string
-	if a.Links != nil {
+	if len(a.Links) > 0 {
 		id = a.Links[0].Href
 	}
 

@@ -153,7 +153,7 @@ func (r *Rss) RssFeed() *RssFeed {
 	}
 
 	var link string
-	if r.Links != nil {
+	if len(r.Links) > 0 {
 		link = r.Links[0].Href
 	}
 

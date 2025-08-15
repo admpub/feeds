@@ -138,7 +138,7 @@ func (f *JSON) JSONFeed() *JSONFeed {
 		Description: f.Description,
 	}
 
-	if f.Links != nil {
+	if len(f.Links) > 0 {
 		feed.HomePageUrl = f.Links[0].Href
 	}
 	if f.Author != nil {
