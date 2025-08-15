@@ -137,9 +137,8 @@ func (r *Rss) RssFeed() *RssFeed {
 	author := ""
 	if r.Author != nil {
 		// check if email is valid
-		email := r.Author.Email
-		if isValidEmail(email) {
-			author = email
+		if len(r.Author.Email) > 0 && isValidEmail(r.Author.Email) {
+			author = r.Author.Email
 			if len(r.Author.Name) > 0 {
 				author = fmt.Sprintf("%s (%s)", r.Author.Email, r.Author.Name)
 			}
